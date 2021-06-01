@@ -1,0 +1,16 @@
+{
+  "name": "Whisbi",
+  "version": "1.0.0",
+  "description": "Frontend Developer Technical Test",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "build": "node build/build.js"
+  },
+  "dependencies": {
+  },
+  "engines": {
+    "node": ">= 14.17.0",
+    "npm": ">= 7.15.1"
+  }
+}
