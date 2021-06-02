@@ -3,11 +3,9 @@ const fs = require('fs');
 const path = require('path');
 
 http.createServer(function (request, response) {
-    console.log('request ', request.url);
-
     let filePath = '.' + request.url;
     if (filePath === './') {
-        filePath = './index.html';
+        filePath = './src/public/index.html';
     }
 
     const extname = String(path.extname(filePath)).toLowerCase();
@@ -44,4 +42,4 @@ http.createServer(function (request, response) {
     });
 
 }).listen(3000);
-console.log('Server running at http://localhost:3000/');
+console.log('Server running at http://localhost:3000');

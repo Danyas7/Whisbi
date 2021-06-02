@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./src/styles/style.css">
+    <script type="text/javascript" src="./src/landingPage.js" defer></script>
+    <title>Currency Comparison</title>
+</head>
+<body onload=loadFunctions()>
+    <h1>Currency Comparison</h1>
+    <div>
+      <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+      <label for="currencyOne">Choose the currency</label>
+        <select id="currencyOne">
+            <option>Choose a Currency</option>
+        </select>
+      <label for="currencyTwo">Choose the currency</label>
+        <select id="currencyTwo">
+            <option>Choose a Currency</option>
+        </select>
+    </div>
+    <br>
+    <div id="resultContainer"></div>
+</body>
+</html>
