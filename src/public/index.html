@@ -12,30 +12,46 @@
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <title>Currency Comparison</title>
 </head>
-<body onload=loadFunctions()>
-    <h1>Currency Comparison</h1>
-    <div>
-      <label for="date">Date:</label>
-        <input type="date" id="date" name="date">
-        <label for="amount">Amount:</label>
-        <input type="text" id="amount" name="amount">
-      <label for="currency-one">Choose the currency</label>
-        <select id="currency-one">
-            <option>Choose a Currency</option>
-        </select>
-      <label for="currency-two">Choose the currency</label>
-        <select id="currency-two">
-            <option>Choose a Currency</option>
-        </select>
+<body class="body" onload=loadFunctions()>
+    <h1 class="title">Currency Comparison</h1>
+    <div class="main-container">
+        <div>
+        <label class="date-label label" for="date">Date:</label>
+        <input class="date-input" type="date" id="date" name="date">
+        </div>
+        <div>
+        <label class="amount-label label" for="amount">Amount:</label>
+        <input class="amount-input" type="text" id="amount" name="amount">
+        </div>
+        <div class="dropdown-wrapper">
+           <div>
+        <label class="dropdown-label-one label" for="currency-one">Choose the currency</label>
+        </div>
+        <div class="currency-one-dropdown">
+            <select class="currency-one" id="currency-one">
+            <option class="currency-dropdown-content" >Choose a Currency</option>
+            </select>
+        </div>
+        <div>
+        <label class="dropdown-label-two label" for="currency-two">Choose the currency</label>
+        </div>
+        <div>
+            </select>
+            <select class="currency-two" id="currency-two">
+            <option class="currency-dropdown-content">Choose a Currency</option>
+            </select>
+        </div>
+        </div>
+    <div class="button-wrapper">
+    <button class="currency-button" id="currency-button">Compare</button>
     </div>
-    <button id="currency-button">Currency Comparison</button>
     <br>
-    <div id="result-container">
-        <div id="result-statement-one"></div>
-        <div id="result-statement-two"></div>
-        <div id="result-statement-three"></div>
+    <div class="result-container" id="result-container">
+        <div class="result-statement-one" id="result-statement-one"></div>
+        <div class="result-statement-two" id="result-statement-two"></div>
+        <div class="result-statement-three" id="result-statement-three"></div>
     </div>
     <br>
-    <div id="chartContainer1"></div>
+    <div class="chartContainer" id="chartContainer" style="height: 370px; width: 90%;"></div>
 </body>
 </html>
