@@ -7,6 +7,7 @@
     <script type="text/javascript" src="./src/landingPage.js" defer></script>
     <script type="text/javascript" src="./src/services/symbolApiCall.js" defer></script>
     <script type="text/javascript" src="./src/services/currencyApiCall.js" defer></script>
+    <script type="text/javascript" src="./src/services/historicalApiCall.js" defer></script>
     <title>Currency Comparison</title>
 </head>
 <body onload=loadFunctions()>
@@ -25,7 +26,7 @@
             <option>Choose a Currency</option>
         </select>
     </div>
-    <button onclick="apiCurrency()">Currency Comparison</button>
+    <button onclick="apiCurrency();apiHistorical()">Currency Comparison</button>
     <br>
     <div id="result-container">
         <div id="result-statement-one"></div>
