@@ -1,6 +1,5 @@
 function loadFunctions() {
     apiSymbols();
-
 }
 
 function findCurrency(dropdown, values) {
