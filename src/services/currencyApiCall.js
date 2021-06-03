@@ -26,11 +26,11 @@ function apiCurrency()
             const resultStatementTwo = document.getElementById("result-statement-two");
             const resultStatementThree = document.getElementById("result-statement-three");
 
-            resultStatementOne.textContent = `1 ${symbols.query.from} equals `;
-            resultStatementOne.value = `1 ${symbols.query.from} equals `;
+            resultStatementOne.textContent = `1 ${firstCurrencyName} equals `;
+            resultStatementOne.value = `1 ${firstCurrencyName} equals `;
 
-            resultStatementTwo.textContent = `${symbols.info.rate} ${symbols.query.to}`;
-            resultStatementTwo.value = `${symbols.info.rate} ${symbols.query.to}`;
+            resultStatementTwo.textContent = `${symbols.info.rate} ${secondCurrencyName}`;
+            resultStatementTwo.value = `${symbols.info.rate} ${secondCurrencyName}`;
 
             resultStatementThree.textContent = `${symbols.query.amount} ${firstCurrencyName} equals ${symbols.result} ${secondCurrencyName}`;
             resultStatementThree.value = `${symbols.query.amount} ${firstCurrencyName} equals ${symbols.result} ${secondCurrencyName}`;
