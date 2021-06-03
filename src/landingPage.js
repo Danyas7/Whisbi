@@ -17,7 +17,9 @@ function findCurrency(dropdown, values) {
     }
 }
 
-function chartDataPoint(historicalData) {
-    console.log('No real data', historicalData);
+async function chartDataPoint(historicalData) {
+    console.log('No real data', await historicalData);
+    let tuubbii = await historicalData;
 
+    console.log('THIS@@@', JSON.stringify(tuubbii));
 } 

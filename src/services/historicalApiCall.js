@@ -1,4 +1,4 @@
-function apiHistorical()
+async function apiHistorical()
 {
     const baseUrl = 'https://api.exchangeratesapi.io/v1/'
     let datesArray = [];
@@ -51,5 +51,5 @@ function apiHistorical()
         }
         requests[x].send("")
     }
-    chartDataPoint(histData);
+    await chartDataPoint(histData);
 }
