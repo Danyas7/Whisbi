@@ -1,7 +1,5 @@
-let firstCurData;
-let secondCurData;
-let currencyCodeOne;
-let currencyCodeTwo;
+let firstCurData, secondCurData, currencyCodeOne, currencyCodeTwo;
+
 
 document.getElementById("currency-button").addEventListener("click", async () => {
     try {
@@ -39,12 +37,16 @@ document.getElementById("currency-button").addEventListener("click", async () =>
                 text: "Currency Line Chart"
             },
             axisX: {
-                valueFormatString: "MM DD YYYY"
+                title: "Date",
+                valueFormatString: "MMM YYYY"
             },
-            axisY2: {
-                title: "Median List Price",
-                prefix: "$",
-                suffix: "K"
+            axisY: {
+                title: "Exchange Rate"
+            },
+            legend: {
+                verticalAlign: "top",
+                horizontalAlign: "center",
+                dockInsidePlotArea: true
             },
             data: [
                 {

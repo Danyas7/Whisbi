@@ -1,5 +1,6 @@
 function apiCurrency()
 {
+    let symbols;
     const baseUrl = 'https://api.exchangeratesapi.io/v1/'
     const endpoint = 'convert'
     const date = document.getElementById("date").value
@@ -15,7 +16,6 @@ function apiCurrency()
 
 
 
-    let symbols;
     const xhr = new XMLHttpRequest();
     xhr.open("GET", `${baseUrl}${endpoint}?access_key=391079608fe2657cbc41c006048b93df&from=${firstCurrencySymbol}&to=${secondCurrencySymbol}&amount=${amount}&date=${date}`, true);
     xhr.onreadystatechange = () => {
