@@ -16,7 +16,6 @@
 .date-input {
     margin-bottom: 22px;
 }
-
 .amount-input {
     margin-bottom: 22px;
 }
@@ -34,6 +33,9 @@
 }
 .currency-one-dropdown {
     margin-right: 22px;
+}
+.currency-one-dropdown-content {
+    width: 100%;
 }
 .input {
     display: flex;
@@ -61,4 +63,18 @@
     transition: all 0.1s linear;
     background-color: #0d8ac7;
     color: #fff;
+}
+.result-container {
+    text-align: center;
+}
+.result-statement-one {
+    font-size: 16px;
+}
+.result-statement-two {
+    font-size: 22px;
+    font-weight: 600;
+}
+.result-statement-two {
+    font-size: 22px;
+    font-weight: 600;
 }
