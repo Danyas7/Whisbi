@@ -5,7 +5,8 @@
     <link rel="stylesheet" href="./src/styles/style.css">
     <script type="text/language" src="./src/services/symbols.json" defer></script>
     <script type="text/javascript" src="./src/landingPage.js" defer></script>
-    <script type="text/javascript" src="./src/services/rateApi.js" defer></script>
+    <script type="text/javascript" src="./src/services/symbolApiCall.js" defer></script>
+    <script type="text/javascript" src="./src/services/currencyApiCall.js" defer></script>
     <title>Currency Comparison</title>
 </head>
 <body onload=loadFunctions()>
@@ -13,6 +14,8 @@
     <div>
       <label for="date">Date:</label>
         <input type="date" id="date" name="date">
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount">
       <label for="currency-one">Choose the currency</label>
         <select id="currency-one">
             <option>Choose a Currency</option>
@@ -22,7 +25,12 @@
             <option>Choose a Currency</option>
         </select>
     </div>
+    <button onclick="apiCurrency()">Currency Comparison</button>
     <br>
-    <div id="result-container"></div>
+    <div id="result-container">
+        <div id="result-statement-one"></div>
+        <div id="result-statement-two"></div>
+        <div id="result-statement-three"></div>
+    </div>
 </body>
 </html>
