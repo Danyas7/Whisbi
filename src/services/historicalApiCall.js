@@ -34,22 +34,42 @@ async function apiHistorical()
     let histData = [];
     const requests = new Array(datesArray.length);
 
-    for (let x = 0; x < datesArray.length; x++) {
-        requests[x] = new XMLHttpRequest();
+    var makeRequest = function (url, method) {
 
-        requests[x].open("GET", `${baseUrl}${datesArray[x]}?access_key=391079608fe2657cbc41c006048b93df&symbols=${firstCurrencySymbol},${secondCurrencySymbol}`, true);
-        requests[x].onreadystatechange = () => {
-            if (requests[x].readyState === XMLHttpRequest.DONE && requests[x].status === 200) {
-                symbols = JSON.parse(requests[x].responseText);
+        // Create the XHR request
+        var request = new XMLHttpRequest();
 
-                histData.push(symbols);
+        // Return it as a Promise
+        return new Promise(function (resolve, reject) {
 
-            } else if (requests[x].status !== 200) {
-                console.error(`Request failed. Request status of ${requests[x].status}`)
-                alert(`Request failed. Request status of ${requests[x].status}`);
-            }
-        }
-        requests[x].send("")
-    }
-    await chartDataPoint(histData);
+            // Setup our listener to process compeleted requests
+            request.onreadystatechange = function () {
+
+                // Only run if the request is complete
+                if (request.readyState !== 4) return;
+
+                // Process the response
+                if (request.status >= 200 && request.status < 300) {
+                    // If successful
+                    resolve(request);
+                } else {
+                    // If failed
+                    reject({
+                        status: request.status,
+                        statusText: request.statusText
+                    });
+                }
+
+            };
+
+            // Setup our HTTP request
+            request.open(method || 'GET', url, true);
+
+            // Send the request
+            request.send();
+
+        });
+    };
+    return datesArray.map(date => makeRequest(`${baseUrl}${date}?access_key=391079608fe2657cbc41c006048b93df&symbols=${firstCurrencySymbol},${secondCurrencySymbol}`, "GET"))
+    
 }

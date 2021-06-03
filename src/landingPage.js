@@ -17,9 +17,14 @@ function findCurrency(dropdown, values) {
     }
 }
 
-async function chartDataPoint(historicalData) {
-    console.log('No real data', await historicalData);
-    let tuubbii = await historicalData;
+document.getElementById("currency-button").addEventListener("click", async () => {
+   try {
+       const deeDate = await apiHistorical();
+       let data = await Promise.all(deeDate);
+       data.map(item => JSON.parse(item.responseText));
+       console.log('DATA', data.map(item => JSON.parse(item.responseText)));
+   } catch(error) {
+       console.error("error", error);
+   }
 
-    console.log('THIS@@@', JSON.stringify(tuubbii));
-} 
+})
