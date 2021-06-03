@@ -1,5 +1,8 @@
+
+
 function loadFunctions() {
     apiSymbols();
+    currencyChart();
 
 }
 
@@ -13,3 +16,8 @@ function findCurrency(dropdown, values) {
         dropdown.appendChild(opt);
     }
 }
+
+function chartDataPoint(historicalData) {
+    console.log('No real data', historicalData);
+
+} 
