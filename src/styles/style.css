@@ -31,33 +31,41 @@
 .dropdown-label-two {
     margin-right: 22px;
 }
-.currency-one-dropdown {
+.currency-one {
     margin-right: 22px;
+    height: 30px;
 }
-.currency-one-dropdown-content {
+.currency-two {
+    margin-right: 22px;
+    height: 30px;
+}
+.currency-dropdown-content {
     width: 100%;
+    height: 30px;
+    font-size: 20px;
 }
-.input {
-    display: flex;
-    flex-direction: column;
-
-    width: 200px;
-    height: 50px;
+.label {
+    font-size: 20px;
+}
+.amount-input {
+    width: 100px;
+    height: 30px;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 18px;
+    text-align: center;
     color: #000;
     background-color: #fff;
     border: 1px solid rgb(204, 204, 204);
-    /*transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;*/
     border-radius: 6px;
 }
 .button-wrapper {
    align-content: center;
 }
-.button {
+.currency-button {
     border-radius: 32px;
     border: none;
     cursor: pointer;
+    font-size: 20px;
     width: 200px;
     height: 50px;
     transition: all 0.1s linear;
@@ -68,13 +76,15 @@
     text-align: center;
 }
 .result-statement-one {
-    font-size: 16px;
+    font-size: 20px;
 }
 .result-statement-two {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
 }
-.result-statement-two {
-    font-size: 22px;
-    font-weight: 600;
+.result-statement-three {
+    font-size: 26px;
+}
+.canvasjs-chart-canvas {
+    display: block !important;
 }

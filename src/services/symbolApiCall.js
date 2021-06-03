@@ -10,8 +10,8 @@ function apiSymbols()
             symbols = Object.entries(symbols.symbols);
             const currencyOne = document.getElementById("currency-one");
             const currencyTwo = document.getElementById("currency-two");
-            findCurrency(currencyOne, symbols)
-            findCurrency(currencyTwo, symbols)
+            loadSymbols(currencyOne, symbols)
+            loadSymbols(currencyTwo, symbols)
         }
          else if (xhr.status !== 200){
             console.error(`Request failed. Request status of ${xhr.status}`)

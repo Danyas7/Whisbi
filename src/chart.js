@@ -30,11 +30,11 @@ document.getElementById("currency-button").addEventListener("click", async () =>
         console.error("error", error);
     }
 
-    const chart = new CanvasJS.Chart("chartContainer1",
+    const chart = new CanvasJS.Chart("chartContainer",
         {
             animationEnabled: true,
             title: {
-                text: "Currency Line Chart"
+                text: " Historical Currency Exchange"
             },
             axisX: {
                 title: "Date",
