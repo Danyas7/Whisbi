@@ -7,23 +7,58 @@
 }
 .main-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 75%;
+    width: 100%;
+    margin-bottom: 22px;
+
 }
-.label {
+.date-input {
+    margin-bottom: 22px;
+}
+
+.amount-input {
+    margin-bottom: 22px;
+}
+.dropdown-wrapper {
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    margin-bottom: 22px;
+}
+.dropdown-label-one {
+    margin-right: 22px;
+}
+.dropdown-label-two {
+    margin-right: 22px;
+}
+.currency-one-dropdown {
+    margin-right: 22px;
 }
 .input {
-    display: block;
+    display: flex;
+    flex-direction: column;
+
     width: 200px;
     height: 50px;
-    padding: 6px 12px;
     box-sizing: border-box;
     font-size: 14px;
-    line-height: 1.42857;
-    color: #79909a;
+    color: #000;
     background-color: #fff;
     border: 1px solid rgb(204, 204, 204);
-    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
-    border-radius: 3px;
+    /*transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;*/
+    border-radius: 6px;
+}
+.button-wrapper {
+   align-content: center;
+}
+.button {
+    border-radius: 32px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+    transition: all 0.1s linear;
+    background-color: #0d8ac7;
+    color: #fff;
 }

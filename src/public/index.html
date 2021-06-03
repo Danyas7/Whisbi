@@ -15,26 +15,35 @@
     <div class="main-container">
         <div>
       <label class="date-label label" for="date">Date:</label>
-        <input class="date-input input" type="date" id="date" name="date">
+        <input class="date-input" type="date" id="date" name="date">
         </div>
         <div>
-        <label class="amount-label label" for="amount">Amount:</label>
-        <input class="amount-input input" type="text" id="amount" name="amount">
+        <label class="amount-label" for="amount">Amount:</label>
         </div>
-        <div>
-      <label class="dropdown-label-one label" for="currency-one">Choose the currency</label>
-        <select id="currency-one">
+            <input class="amount-input input" type="text" id="amount" name="amount">
+        <div class="dropdown-wrapper">
+           <div>
+        <label class="dropdown-label-one label" for="currency-one">Choose the currency</label>
+        </div>
+        <div class="currency-one-dropdown">
+            <select id="currency-one">
             <option>Choose a Currency</option>
-        </select>
+            </select>
         </div>
         <div>
-      <label class="dropdown-label-two label" for="currency-two">Choose the currency</label>
-        <select id="currency-two">
-            <option>Choose a Currency</option>
-        </select>
+        <label class="dropdown-label-two label" for="currency-two">Choose the currency</label>
         </div>
+        <div>
+            </select>
+            <select id="currency-two">
+            <option>Choose a Currency</option>
+            </select>
+        </div>
+        </div>
+    <div class="button-wrapper">
+    <button class="button" onclick="apiCurrency();apiHistorical()">Currency Comparison</button>
     </div>
-    <button onclick="apiCurrency();apiHistorical()">Currency Comparison</button>
+    </div>
     <br>
     <div id="result-container">
         <div id="result-statement-one"></div>
