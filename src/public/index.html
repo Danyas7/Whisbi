@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./src/styles/style.css">
     <script type="text/language" src="./src/services/symbols.json" defer></script>
-    <script type="text/javascript" src="./src/landingPage.js" defer></script>
+    <script type="text/javascript" src="./src/symbols.js" defer></script>
+    <script type="text/javascript" src="./src/chart.js" defer></script>
     <script type="text/javascript" src="./src/services/symbolApiCall.js" defer></script>
     <script type="text/javascript" src="./src/services/currencyApiCall.js" defer></script>
     <script type="text/javascript" src="./src/services/historicalApiCall.js" defer></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <title>Currency Comparison</title>
 </head>
 <body onload=loadFunctions()>
@@ -26,12 +28,14 @@
             <option>Choose a Currency</option>
         </select>
     </div>
-    <button onclick="apiCurrency();apiHistorical()">Currency Comparison</button>
+    <button id="currency-button">Currency Comparison</button>
     <br>
     <div id="result-container">
         <div id="result-statement-one"></div>
         <div id="result-statement-two"></div>
         <div id="result-statement-three"></div>
     </div>
+    <br>
+    <div id="chartContainer1"></div>
 </body>
 </html>
