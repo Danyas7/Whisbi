@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./src/styles/style.css">
+    <script type="text/language" src="./src/services/symbols.json" defer></script>
     <script type="text/javascript" src="./src/landingPage.js" defer></script>
+    <script type="text/javascript" src="./src/services/rateApi.js" defer></script>
     <title>Currency Comparison</title>
 </head>
 <body onload=loadFunctions()>
@@ -11,16 +13,16 @@
     <div>
       <label for="date">Date:</label>
         <input type="date" id="date" name="date">
-      <label for="currencyOne">Choose the currency</label>
-        <select id="currencyOne">
+      <label for="currency-one">Choose the currency</label>
+        <select id="currency-one">
             <option>Choose a Currency</option>
         </select>
-      <label for="currencyTwo">Choose the currency</label>
-        <select id="currencyTwo">
+      <label for="currency-two">Choose the currency</label>
+        <select id="currency-two">
             <option>Choose a Currency</option>
         </select>
     </div>
     <br>
-    <div id="resultContainer"></div>
+    <div id="result-container"></div>
 </body>
 </html>
