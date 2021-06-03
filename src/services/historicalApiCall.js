@@ -2,7 +2,6 @@ function apiHistorical()
 {
     const baseUrl = 'https://api.exchangeratesapi.io/v1/'
     const startDate = document.getElementById("date").value;
-    console.log('date', startDate);
     let endDate = new Date(startDate);
     endDate.setMonth(endDate.getMonth("YYYY-MM-DD") - 1);
 
