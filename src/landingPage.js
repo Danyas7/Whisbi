@@ -1,15 +1,14 @@
 function loadFunctions() {
-    apiRequest();
+    apiSymbols();
 }
 
 function findCurrency(dropdown, values) {
-    for(var i = 0; i < values.length; i++) {
-        var val = values[i];
+    for(let i = 0; i < values.length; i++) {
+        const val = values[i].join(', ');
 
-        var opt = document.createElement("option");
+        const opt = document.createElement("option");
         opt.textContent = val;
         opt.value = val;
-        dropdown.appendChild(opt);
         dropdown.appendChild(opt);
     }
 }

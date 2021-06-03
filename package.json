@@ -2,9 +2,9 @@
   "name": "Whisbi",
   "version": "1.0.0",
   "description": "Frontend Developer Technical Test",
-  "main": "src/app.js",
+  "main": "src/services/app.js",
   "scripts": {
-    "start": "node src/app.js",
+    "start": "node src/services/app.js",
     "build": "node build/build.js"
   },
   "dependencies": {
