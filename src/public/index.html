@@ -10,21 +10,29 @@
     <script type="text/javascript" src="./src/services/historicalApiCall.js" defer></script>
     <title>Currency Comparison</title>
 </head>
-<body onload=loadFunctions()>
-    <h1>Currency Comparison</h1>
-    <div>
-      <label for="date">Date:</label>
-        <input type="date" id="date" name="date">
-        <label for="amount">Amount:</label>
-        <input type="text" id="amount" name="amount">
-      <label for="currency-one">Choose the currency</label>
+<body class="body" onload=loadFunctions()>
+    <h1 class="title">Currency Comparison</h1>
+    <div class="main-container">
+        <div>
+      <label class="date-label label" for="date">Date:</label>
+        <input class="date-input input" type="date" id="date" name="date">
+        </div>
+        <div>
+        <label class="amount-label label" for="amount">Amount:</label>
+        <input class="amount-input input" type="text" id="amount" name="amount">
+        </div>
+        <div>
+      <label class="dropdown-label-one label" for="currency-one">Choose the currency</label>
         <select id="currency-one">
             <option>Choose a Currency</option>
         </select>
-      <label for="currency-two">Choose the currency</label>
+        </div>
+        <div>
+      <label class="dropdown-label-two label" for="currency-two">Choose the currency</label>
         <select id="currency-two">
             <option>Choose a Currency</option>
         </select>
+        </div>
     </div>
     <button onclick="apiCurrency();apiHistorical()">Currency Comparison</button>
     <br>
