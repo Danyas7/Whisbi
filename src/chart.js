@@ -1,36 +1,69 @@
-function currencyChart() {
+let firstCurData;
+let secondCurData;
+let currencyCodeOne;
+let currencyCodeTwo;
+
+document.getElementById("currency-button").addEventListener("click", async () => {
+    try {
+        const histData = await apiHistorical();
+        let data = await Promise.all(histData);
+        data = data.map(item => JSON.parse(item.responseText));
+
+        currencyCodeOne = Object.keys(data[0].rates)[0];
+        currencyCodeTwo = Object.keys(data[0].rates)[1];
+
+        firstCurData = data.map(byDate => (
+            {
+                x: new Date(byDate.date),
+                y: byDate.rates[Object.keys(byDate.rates)[0]]
+            }
+        ));
+
+
+        secondCurData = data.map(byDate => (
+            {
+                x: new Date(byDate.date),
+                y: byDate.rates[Object.keys(byDate.rates)[1]]
+            }
+        ));
+
+        
+    } catch(error) {
+        console.error("error", error);
+    }
+
     const chart = new CanvasJS.Chart("chartContainer1",
         {
             animationEnabled: true,
             title: {
-                text: "Spline Area Chart"
+                text: "Currency Line Chart"
             },
             axisX: {
-                interval: 10,
+                valueFormatString: "MM DD YYYY"
+            },
+            axisY2: {
+                title: "Median List Price",
+                prefix: "$",
+                suffix: "K"
             },
             data: [
                 {
-                    type: "splineArea",
+                    type: "line",
                     color: "rgba(255,12,32,.3)",
-                    dataPoints: [
-                        {x: new Date(1992, 0), y: 2506000},
-                        {x: new Date(1993, 0), y: 2798000},
-                        {x: new Date(1994, 0), y: 3386000},
-                        {x: new Date(1995, 0), y: 6944000},
-                        {x: new Date(1996, 0), y: 6026000},
-                        {x: new Date(1997, 0), y: 2394000},
-                        {x: new Date(1998, 0), y: 1872000},
-                        {x: new Date(1999, 0), y: 2140000},
-                        {x: new Date(2000, 0), y: 7289000},
-                        {x: new Date(2001, 0), y: 4830000},
-                        {x: new Date(2002, 0), y: 2009000},
-                        {x: new Date(2003, 0), y: 2840000},
-                        {x: new Date(2004, 0), y: 2396000},
-                        {x: new Date(2005, 0), y: 1613000},
-                        {x: new Date(2006, 0), y: 2821000}
-                    ]
+                    name: currencyCodeOne,
+                    showInLegend: true,
+                    dataPoints: firstCurData
+                },
+                {
+                    type: "line",
+                    color: "rgba(55,12,232,.3)",
+                    name: currencyCodeTwo,
+                    showInLegend: true,
+                    dataPoints: secondCurData
                 },
             ]
         });
     chart.render();
-}
+
+
+})
