@@ -1,5 +1,4 @@
-function apiSymbols()
-{
+function apiSymbols() {
     let baseUrl = "https://api.exchangeratesapi.io/v1/"
     let symbols;
     const xhr = new XMLHttpRequest();
