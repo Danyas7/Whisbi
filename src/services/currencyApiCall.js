@@ -1,5 +1,4 @@
-function apiCurrency()
-{
+function apiCurrency() {
     let symbols;
     const baseUrl = 'https://api.exchangeratesapi.io/v1/'
     const endpoint = 'convert'
@@ -13,8 +12,6 @@ function apiCurrency()
     let secondCurrency = document.getElementById("currency-two").value
     const secondCurrencySymbol = secondCurrency.slice(0, 3);
     const secondCurrencyName = secondCurrency.slice(5);
-
-
 
     const xhr = new XMLHttpRequest();
     xhr.open("GET", `${baseUrl}${endpoint}?access_key=391079608fe2657cbc41c006048b93df&from=${firstCurrencySymbol}&to=${secondCurrencySymbol}&amount=${amount}&date=${date}`, true);
