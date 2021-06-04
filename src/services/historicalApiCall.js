@@ -1,7 +1,8 @@
-async function apiHistorical()
-{
-    const baseUrl = 'https://api.exchangeratesapi.io/v1/'
+async function apiHistorical() {
+    let symbols;
     let datesArray = [];
+    let histData = [];
+    const baseUrl = 'https://api.exchangeratesapi.io/v1/'
     const startDate = document.getElementById("date").value;
     let endDate = new Date(startDate);
 
@@ -71,5 +72,4 @@ async function apiHistorical()
         });
     };
     return datesArray.map(date => makeRequest(`${baseUrl}${date}?access_key=391079608fe2657cbc41c006048b93df&symbols=${firstCurrencySymbol},${secondCurrencySymbol}`, "GET"))
-    
 }

@@ -1,6 +1,5 @@
 let firstCurData, secondCurData, currencyCodeOne, currencyCodeTwo;
 
-
 document.getElementById("currency-button").addEventListener("click", async () => {
     try {
         const histData = await apiHistorical();
@@ -16,16 +15,13 @@ document.getElementById("currency-button").addEventListener("click", async () =>
                 y: byDate.rates[Object.keys(byDate.rates)[0]]
             }
         ));
-
-
         secondCurData = data.map(byDate => (
             {
                 x: new Date(byDate.date),
                 y: byDate.rates[Object.keys(byDate.rates)[1]]
             }
         ));
-
-        
+  
     } catch(error) {
         console.error("error", error);
     }
@@ -66,6 +62,4 @@ document.getElementById("currency-button").addEventListener("click", async () =>
             ]
         });
     chart.render();
-
-
 })
