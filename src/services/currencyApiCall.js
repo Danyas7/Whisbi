@@ -20,8 +20,8 @@ function apiCurrency()
     xhr.open("GET", `${baseUrl}${endpoint}?access_key=391079608fe2657cbc41c006048b93df&from=${firstCurrencySymbol}&to=${secondCurrencySymbol}&amount=${amount}&date=${date}`, true);
     xhr.onreadystatechange = () => {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            //TODO: This logic can be move to a separate function
             symbols = JSON.parse(xhr.responseText);
-
             const resultStatementOne = document.getElementById("result-statement-one");
             const resultStatementTwo = document.getElementById("result-statement-two");
             const resultStatementThree = document.getElementById("result-statement-three");

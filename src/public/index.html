@@ -10,10 +10,10 @@
     <script type="text/javascript" src="./src/services/symbolApiCall.js" defer></script>
     <script type="text/javascript" src="./src/services/currencyApiCall.js" defer></script>
     <script type="text/javascript" src="./src/services/historicalApiCall.js" defer></script>
-    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js" defer></script>
     <title>Currency Comparison</title>
 </head>
-<body class="body" onload=loadFunctions()>
+<body class="body" onload=loadFunction()>
     <h1 class="title">Currency Comparison</h1>
     <div class="main-container">
         <div>
@@ -22,7 +22,7 @@
         </div>
         <div>
         <label class="amount-label label" for="amount">Amount:</label>
-        <input class="amount-input" type="text" id="amount" name="amount">
+        <input class="amount-input" type="number" id="amount" name="amount">
         </div>
         <div class="dropdown-wrapper">
            <div>
@@ -37,7 +37,6 @@
         <label class="dropdown-label-two label" for="currency-two">Choose the currency</label>
         </div>
         <div>
-            </select>
             <select class="currency-two" id="currency-two">
             <option class="currency-dropdown-content">Choose a Currency</option>
             </select>
@@ -54,5 +53,6 @@
     </div>
     <br>
     <div class="chartContainer" id="chartContainer" style="height: 370px; width: 90%;"></div>
+    </div>
 </body>
 </html>

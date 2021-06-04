@@ -1,4 +1,4 @@
-function loadFunctions() {
+function loadFunction() {
     apiSymbols();
 }
 

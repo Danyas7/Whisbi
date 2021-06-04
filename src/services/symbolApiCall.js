@@ -6,6 +6,9 @@ function apiSymbols()
     xhr.open("GET", `${baseUrl}symbols?access_key=391079608fe2657cbc41c006048b93df`, true);
     xhr.onreadystatechange = () => {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            
+            //TODO: This logic can be move to a separate function
+            
             symbols = JSON.parse(xhr.responseText);
             symbols = Object.entries(symbols.symbols);
             const currencyOne = document.getElementById("currency-one");
