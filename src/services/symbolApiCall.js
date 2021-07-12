@@ -6,7 +6,7 @@ function apiSymbols() {
     xhr.onreadystatechange = () => {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
             
-            //TODO: This logic can be move to a separate function
+            //TODO: This logic can be moved to a separate function
             
             symbols = JSON.parse(xhr.responseText);
             symbols = Object.entries(symbols.symbols);
